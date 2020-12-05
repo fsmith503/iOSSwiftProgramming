@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet var answerLabel: UILabel!
     @IBOutlet var showAnswerButton: UIButton!
     
-    
     let questions: [String] = [
     "What is 7+7?",
     "What is the capital of California",
@@ -45,8 +44,6 @@ class ViewController: UIViewController {
             showAnswerButton.setTitle("Hide Answer", for: .normal)
             let answer: String = answers[currentQuestionIndex]
             answerLabel.text = answer
-            //answerLabel.text = "??? IDK"
-            
         }
         else {
             showAnswerButton.setTitle("Show Answer", for: .normal)
@@ -60,7 +57,5 @@ class ViewController: UIViewController {
         questionlabel.text = questions[currentQuestionIndex]
         // Do any additional setup after loading the view.
     }
-
-
 }
 
