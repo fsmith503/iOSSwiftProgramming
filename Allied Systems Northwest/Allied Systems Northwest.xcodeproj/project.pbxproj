@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		375506D4258E66A200E4219A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375506D3258E66A200E4219A /* AppDelegate.swift */; };
+		375506D6258E66A200E4219A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375506D5258E66A200E4219A /* SceneDelegate.swift */; };
+		375506D8258E66A200E4219A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375506D7258E66A200E4219A /* ViewController.swift */; };
+		375506DD258E66A300E4219A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375506DC258E66A300E4219A /* Assets.xcassets */; };
+		375506ED258E676D00E4219A /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375506EB258E676D00E4219A /* ContactViewController.swift */; };
+		375506EE258E676D00E4219A /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375506EC258E676D00E4219A /* ContactViewController.xib */; };
+		375506F2258E677D00E4219A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375506F0258E677D00E4219A /* AboutViewController.swift */; };
+		375506F3258E677D00E4219A /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375506F1258E677D00E4219A /* AboutViewController.xib */; };
+		375506F7258E678F00E4219A /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375506F5258E678F00E4219A /* EntryViewController.swift */; };
+		375506F8258E678F00E4219A /* EntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375506F6258E678F00E4219A /* EntryViewController.xib */; };
+		3755070C258E6D3000E4219A /* launchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3755070B258E6D3000E4219A /* launchScreen.xib */; };
+		37550710258E6D5700E4219A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3755070F258E6D5700E4219A /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		375506D0258E66A200E4219A /* Allied Systems Northwest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Allied Systems Northwest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		375506D3258E66A200E4219A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		375506D5258E66A200E4219A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		375506D7258E66A200E4219A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		375506DC258E66A300E4219A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		375506E1258E66A300E4219A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		375506EB258E676D00E4219A /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		375506EC258E676D00E4219A /* ContactViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
+		375506F0258E677D00E4219A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		375506F1258E677D00E4219A /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		375506F5258E678F00E4219A /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		375506F6258E678F00E4219A /* EntryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryViewController.xib; sourceTree = "<group>"; };
+		375506FC258E694400E4219A /* Allied Systems Northwest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Allied Systems Northwest.entitlements"; sourceTree = "<group>"; };
+		3755070B258E6D3000E4219A /* launchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = launchScreen.xib; sourceTree = "<group>"; };
+		3755070F258E6D5700E4219A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		375506CD258E66A200E4219A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		375506C7258E66A200E4219A = {
+			isa = PBXGroup;
+			children = (
+				375506D2258E66A200E4219A /* Allied Systems Northwest */,
+				375506D1258E66A200E4219A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		375506D1258E66A200E4219A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				375506D0258E66A200E4219A /* Allied Systems Northwest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		375506D2258E66A200E4219A /* Allied Systems Northwest */ = {
+			isa = PBXGroup;
+			children = (
+				375506FC258E694400E4219A /* Allied Systems Northwest.entitlements */,
+				3755070B258E6D3000E4219A /* launchScreen.xib */,
+				3755070F258E6D5700E4219A /* Main.storyboard */,
+				375506EA258E674100E4219A /* ContactViewController */,
+				375506E9258E673900E4219A /* AboutViewController */,
+				375506E8258E670B00E4219A /* EntryViewController */,
+				375506D3258E66A200E4219A /* AppDelegate.swift */,
+				375506D5258E66A200E4219A /* SceneDelegate.swift */,
+				375506D7258E66A200E4219A /* ViewController.swift */,
+				375506DC258E66A300E4219A /* Assets.xcassets */,
+				375506E1258E66A300E4219A /* Info.plist */,
+			);
+			path = "Allied Systems Northwest";
+			sourceTree = "<group>";
+		};
+		375506E8258E670B00E4219A /* EntryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				375506F5258E678F00E4219A /* EntryViewController.swift */,
+				375506F6258E678F00E4219A /* EntryViewController.xib */,
+			);
+			path = EntryViewController;
+			sourceTree = "<group>";
+		};
+		375506E9258E673900E4219A /* AboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				375506F0258E677D00E4219A /* AboutViewController.swift */,
+				375506F1258E677D00E4219A /* AboutViewController.xib */,
+			);
+			path = AboutViewController;
+			sourceTree = "<group>";
+		};
+		375506EA258E674100E4219A /* ContactViewController */ = {
+			isa = PBXGroup;
+			children = (
+				375506EB258E676D00E4219A /* ContactViewController.swift */,
+				375506EC258E676D00E4219A /* ContactViewController.xib */,
+			);
+			path = ContactViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		375506CF258E66A200E4219A /* Allied Systems Northwest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 375506E4258E66A300E4219A /* Build configuration list for PBXNativeTarget "Allied Systems Northwest" */;
+			buildPhases = (
+				375506CC258E66A200E4219A /* Sources */,
+				375506CD258E66A200E4219A /* Frameworks */,
+				375506CE258E66A200E4219A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Allied Systems Northwest";
+			productName = "Allied Systems Northwest";
+			productReference = 375506D0258E66A200E4219A /* Allied Systems Northwest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		375506C8258E66A200E4219A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					375506CF258E66A200E4219A = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 375506CB258E66A200E4219A /* Build configuration list for PBXProject "Allied Systems Northwest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 375506C7258E66A200E4219A;
+			productRefGroup = 375506D1258E66A200E4219A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				375506CF258E66A200E4219A /* Allied Systems Northwest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		375506CE258E66A200E4219A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				375506EE258E676D00E4219A /* ContactViewController.xib in Resources */,
+				3755070C258E6D3000E4219A /* launchScreen.xib in Resources */,
+				375506DD258E66A300E4219A /* Assets.xcassets in Resources */,
+				37550710258E6D5700E4219A /* Main.storyboard in Resources */,
+				375506F3258E677D00E4219A /* AboutViewController.xib in Resources */,
+				375506F8258E678F00E4219A /* EntryViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		375506CC258E66A200E4219A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				375506D8258E66A200E4219A /* ViewController.swift in Sources */,
+				375506ED258E676D00E4219A /* ContactViewController.swift in Sources */,
+				375506D4258E66A200E4219A /* AppDelegate.swift in Sources */,
+				375506F2258E677D00E4219A /* AboutViewController.swift in Sources */,
+				375506D6258E66A200E4219A /* SceneDelegate.swift in Sources */,
+				375506F7258E678F00E4219A /* EntryViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		375506E2258E66A300E4219A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		375506E3258E66A300E4219A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		375506E5258E66A300E4219A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Allied Systems Northwest/Allied Systems Northwest.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8KKT8ZPVV3;
+				INFOPLIST_FILE = "Allied Systems Northwest/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.Allied-Systems-Northwest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		375506E6258E66A300E4219A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Allied Systems Northwest/Allied Systems Northwest.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8KKT8ZPVV3;
+				INFOPLIST_FILE = "Allied Systems Northwest/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.Allied-Systems-Northwest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		375506CB258E66A200E4219A /* Build configuration list for PBXProject "Allied Systems Northwest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				375506E2258E66A300E4219A /* Debug */,
+				375506E3258E66A300E4219A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		375506E4258E66A300E4219A /* Build configuration list for PBXNativeTarget "Allied Systems Northwest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				375506E5258E66A300E4219A /* Debug */,
+				375506E6258E66A300E4219A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 375506C8258E66A200E4219A /* Project object */;
+}
