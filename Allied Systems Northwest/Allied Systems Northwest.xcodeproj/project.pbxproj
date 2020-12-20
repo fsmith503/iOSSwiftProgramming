@@ -18,7 +18,6 @@
 		375506F7258E678F00E4219A /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375506F5258E678F00E4219A /* EntryViewController.swift */; };
 		375506F8258E678F00E4219A /* EntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375506F6258E678F00E4219A /* EntryViewController.xib */; };
 		3755070C258E6D3000E4219A /* launchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3755070B258E6D3000E4219A /* launchScreen.xib */; };
-		37550710258E6D5700E4219A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3755070F258E6D5700E4219A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +35,6 @@
 		375506F6258E678F00E4219A /* EntryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryViewController.xib; sourceTree = "<group>"; };
 		375506FC258E694400E4219A /* Allied Systems Northwest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Allied Systems Northwest.entitlements"; sourceTree = "<group>"; };
 		3755070B258E6D3000E4219A /* launchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = launchScreen.xib; sourceTree = "<group>"; };
-		3755070F258E6D5700E4219A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 			children = (
 				375506FC258E694400E4219A /* Allied Systems Northwest.entitlements */,
 				3755070B258E6D3000E4219A /* launchScreen.xib */,
-				3755070F258E6D5700E4219A /* Main.storyboard */,
 				375506EA258E674100E4219A /* ContactViewController */,
 				375506E9258E673900E4219A /* AboutViewController */,
 				375506E8258E670B00E4219A /* EntryViewController */,
@@ -171,7 +168,6 @@
 				375506EE258E676D00E4219A /* ContactViewController.xib in Resources */,
 				3755070C258E6D3000E4219A /* launchScreen.xib in Resources */,
 				375506DD258E66A300E4219A /* Assets.xcassets in Resources */,
-				37550710258E6D5700E4219A /* Main.storyboard in Resources */,
 				375506F3258E677D00E4219A /* AboutViewController.xib in Resources */,
 				375506F8258E678F00E4219A /* EntryViewController.xib in Resources */,
 			);
