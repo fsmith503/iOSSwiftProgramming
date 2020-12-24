@@ -42,6 +42,30 @@ class MapViewController: UIViewController {
         topConstraint.isActive = true
         leadingConstraint.isActive = true
         trailingConstraint.isActive = true
+        
+        //var label = UILabel()
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label.center = CGPoint(x: 120, y: 110)
+        //label.textAlignment = .center
+        label.text = "Points of interest"
+        label.textColor = UIColor.systemBlue
+        self.view.addSubview(label)
+        
+        var toggleSwitch = UISwitch()
+        toggleSwitch.center = CGPoint(x: 180, y: 110)
+        toggleSwitch.tintColor = UIColor.systemBlue
+        self.view.addSubview(toggleSwitch)
+        
+        let labelTopConstraint = label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15)
+        let labelLeadingConstraint = label.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
+        let labelTrailingConstraint = label.leadingAnchor.constraint(equalTo: margins.trailingAnchor)
+        
+        labelTopConstraint.isActive = true
+        labelLeadingConstraint.isActive = true
+        labelTrailingConstraint.isActive = true
+        label.isHidden = false
+        //view.addSubview(label)
+        
     }
     
     @objc func mapTypeChanged(_ segControl: UISegmentedControl){
