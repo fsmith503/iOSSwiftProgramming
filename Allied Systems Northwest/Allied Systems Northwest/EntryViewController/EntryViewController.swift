@@ -11,6 +11,8 @@ class EntryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Have loaded entry view controller")
+        self.window.backgroundColor = UIColor.RED
 
         // Do any additional setup after loading the view.
     }
