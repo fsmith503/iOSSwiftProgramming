@@ -19,13 +19,13 @@ class MapViewController: UIViewController {
     var showCompasslabel = UILabel()
     var showTrafficSwitch = UISwitch()
     var showTrafficlabel = UILabel()
-    
+    var pointOfInterestSwitch = UISwitch()
+    var pointOfInterestLabel = UILabel()
     
     
     override func loadView(){
         // creating a map view
         mapView = MKMapView()
-        
         //set it as *the* view of this view controller
         view = mapView
         
@@ -77,16 +77,6 @@ class MapViewController: UIViewController {
         showCompasslabelTrailingConstraint.isActive = true
         showCompasslabelLeadingingConstraint.isActive = true
         showCompasslabel.isHidden = false
-        
-        // MARK: Adding compass to view
-//        var compassButton = MKCompassButton(mapView: mapView)   // Make a new compass
-//        //compassButton.compassVisibility = .visible    // Make it visible
-//        mapView.addSubview(compassButton) // Add it to the view
-//        // Position it as required
-//        compassButton.translatesAutoresizingMaskIntoConstraints = false
-//        compassButton.trailingAnchor.constraint(equalTo: mapView.trailingAnchor, constant: -12).isActive = true
-//        compassButton.topAnchor.constraint(equalTo: mapView.topAnchor, constant: 100).isActive = true
-        //self.view.addSubview(compassButton)
     
         // MARK: Show Compass Switch
         toggleCompassSwitch.center = CGPoint(x: 180, y: 150)
@@ -114,6 +104,26 @@ class MapViewController: UIViewController {
         self.view.addSubview(showTrafficSwitch)
         showTrafficSwitch.addTarget(self, action: #selector(toggleTrafficSwitchChanged), for: .touchUpInside)
         
+        // MARK: Point of interest label
+        pointOfInterestLabel = UILabel(frame: CGRect(x:0, y:0, width: 200, height: 21))
+        pointOfInterestLabel.center = CGPoint(x: 120, y: 230)
+        pointOfInterestLabel.text = "Points Of Interest"
+        pointOfInterestLabel.textColor = UIColor.systemBlue
+        self.view.addSubview(pointOfInterestLabel)
+        let POIlabelTopConstraint = pointOfInterestLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15)
+        let POIlabelLeadingConstraint = pointOfInterestLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
+        let POIlabelTrailingConstraint = pointOfInterestLabel.leadingAnchor.constraint(equalTo: margins.trailingAnchor)
+        POIlabelLeadingConstraint.isActive = true
+        POIlabelTopConstraint.isActive = true
+        POIlabelTrailingConstraint.isActive = true
+        pointOfInterestLabel.isHidden = false
+        
+        // MARK: Point of interest switch
+        pointOfInterestSwitch.center = CGPoint(x: 180, y: 230)
+        pointOfInterestSwitch.tintColor = UIColor.systemBlue
+        self.view.addSubview(pointOfInterestSwitch)
+        pointOfInterestSwitch.addTarget(self, action: #selector(togglePOISwitchChanged), for: .touchUpInside)
+        
     }
 
     
@@ -124,16 +134,19 @@ class MapViewController: UIViewController {
             self.showBuildinglabel.textColor = UIColor.systemBlue
             self.showCompasslabel.textColor = UIColor.systemBlue
             self.showTrafficlabel.textColor = UIColor.systemBlue
+            self.pointOfInterestLabel.textColor = UIColor.systemBlue
         case 1:
             mapView.mapType = .hybrid
             self.showBuildinglabel.textColor = UIColor.red
             self.showCompasslabel.textColor = UIColor.red
             self.showTrafficlabel.textColor = UIColor.red
+            self.pointOfInterestLabel.textColor = UIColor.red
         case 2:
             mapView.mapType = .satellite
             self.showBuildinglabel.textColor = UIColor.purple
             self.showCompasslabel.textColor = UIColor.purple
             self.showTrafficlabel.textColor = UIColor.purple
+            self.pointOfInterestLabel.textColor = UIColor.purple
         default:
             break
         }
@@ -148,7 +161,7 @@ class MapViewController: UIViewController {
     }
     
     @objc func toggleCompassSwitchChanged(){
-        var compassButton = MKCompassButton(mapView: mapView)   // Make a new compass
+        let compassButton = MKCompassButton(mapView: mapView)   // Make a new compass
         //compassButton.compassVisibility = .visible    // Make it visible
         mapView.addSubview(compassButton) // Add it to the view
         // Position it as required
@@ -171,6 +184,21 @@ class MapViewController: UIViewController {
         }
         else{
             mapView.showsTraffic = false
+        }
+    }
+    
+    @objc func togglePOISwitchChanged(){
+        if pointOfInterestSwitch.isOn{
+            mapView.pointOfInterestFilter?.includes(MKPointOfInterestCategory.airport)
+            mapView.pointOfInterestFilter?.includes(MKPointOfInterestCategory.foodMarket)
+            mapView.pointOfInterestFilter?.includes(MKPointOfInterestCategory.restaurant)
+            mapView.pointOfInterestFilter?.includes(MKPointOfInterestCategory.cafe)
+            mapView.pointOfInterestFilter?.includes(MKPointOfInterestCategory.park)
+        }
+        else {
+            mapView.pointOfInterestFilter?.excludes(MKPointOfInterestCategory.airport)
+            mapView.pointOfInterestFilter?.excludes(MKPointOfInterestCategory.foodMarket)
+            mapView.pointOfInterestFilter?.excludes(MKPointOfInterestCategory.restaurant)
         }
     }
     
