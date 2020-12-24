@@ -21,6 +21,8 @@ class MapViewController: UIViewController {
     var showTrafficlabel = UILabel()
     var pointOfInterestSwitch = UISwitch()
     var pointOfInterestLabel = UILabel()
+    var showZClabel = UILabel()
+    var showZCSwitch = UISwitch()
     
     
     override func loadView(){
@@ -124,6 +126,26 @@ class MapViewController: UIViewController {
         self.view.addSubview(pointOfInterestSwitch)
         pointOfInterestSwitch.addTarget(self, action: #selector(togglePOISwitchChanged), for: .touchUpInside)
         
+        // MARK: Show zc label
+        showZClabel = UILabel(frame: CGRect(x:0, y:0, width: 200, height: 21))
+        showZClabel.center = CGPoint(x: 120, y: 270)
+        showZClabel.text = "Shows Scale"
+        showZClabel.textColor = UIColor.systemBlue
+        self.view.addSubview(showZClabel)
+        let zclabelTopConstraint = showZClabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15)
+        let zclabelLeadingConstraint = showZClabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
+        let zclabelTrailingConstraint = showZClabel.leadingAnchor.constraint(equalTo: margins.trailingAnchor)
+        zclabelTopConstraint.isActive = true
+        zclabelLeadingConstraint.isActive = true
+        zclabelTrailingConstraint.isActive = true
+        showZClabel.isHidden = false
+        
+        // MARK: Show ZC switch
+        showZCSwitch.center = CGPoint(x: 180, y: 270)
+        showZCSwitch.tintColor = UIColor.systemBlue
+        self.view.addSubview(showZCSwitch)
+        showZCSwitch.addTarget(self, action: #selector(zcSwitchChanged), for: .touchUpInside)
+        
     }
 
     
@@ -135,18 +157,21 @@ class MapViewController: UIViewController {
             self.showCompasslabel.textColor = UIColor.systemBlue
             self.showTrafficlabel.textColor = UIColor.systemBlue
             self.pointOfInterestLabel.textColor = UIColor.systemBlue
+            self.showZClabel.textColor = UIColor.systemBlue
         case 1:
             mapView.mapType = .hybrid
             self.showBuildinglabel.textColor = UIColor.red
             self.showCompasslabel.textColor = UIColor.red
             self.showTrafficlabel.textColor = UIColor.red
             self.pointOfInterestLabel.textColor = UIColor.red
+            self.showZClabel.textColor = UIColor.systemBlue
         case 2:
             mapView.mapType = .satellite
             self.showBuildinglabel.textColor = UIColor.purple
             self.showCompasslabel.textColor = UIColor.purple
             self.showTrafficlabel.textColor = UIColor.purple
             self.pointOfInterestLabel.textColor = UIColor.purple
+            self.showZClabel.textColor = UIColor.purple
         default:
             break
         }
@@ -201,6 +226,16 @@ class MapViewController: UIViewController {
             mapView.pointOfInterestFilter?.excludes(MKPointOfInterestCategory.restaurant)
         }
     }
+    
+    @objc func zcSwitchChanged(){
+        if showZCSwitch.isOn{
+            mapView.showsScale = true
+        }
+        else{
+            mapView.showsScale = false
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
