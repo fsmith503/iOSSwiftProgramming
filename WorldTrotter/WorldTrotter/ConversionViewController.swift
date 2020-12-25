@@ -8,38 +8,69 @@
 import UIKit
 
 class ConversionViewController: UIViewController {
+    
+    @IBOutlet var celsiusLabel: UILabel!
+    @IBOutlet var textField: UITextField!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        print("Conversion VC loaded its view")
-        //createGradientLayer()
-//        // Do any additional setup after loading the view.
-//
-//        let firstFrame = CGRect(x: 160, y: 240, width: 100, height: 150)
-//        let firstView = UIView(frame: firstFrame)
-//        firstView.backgroundColor = UIColor.blue
-//        view.addSubview(firstView)
-//
-//
-//        let secondFrame = CGRect(x: 20, y: 30, width: 50, height: 50)
-//        let secondView = UIView(frame: secondFrame)
-//        secondView.backgroundColor = UIColor.green
-////        view.addSubview(secondView)
-//        firstView.addSubview(secondView)
+    var fahrenheitValue: Measurement<UnitTemperature>?{
+        didSet{
+            updateClesiusLabel()
+        }
     }
     
-
-    func createGradientLayer() {
-        let gradientLayer = CAGradientLayer()
-     
-        gradientLayer.frame = self.view.bounds
-     
-        gradientLayer.colors = [UIColor.red.cgColor, UIColor.yellow.cgColor]
-        //self.view.layer.addSublayer(gradientLayer)
-        self.view.layer.sublayers?.append(gradientLayer)
+    var celsiusValue: Measurement<UnitTemperature>? {
+        if let fahrenheitValue = fahrenheitValue {
+            return fahrenheitValue.converted(to: .celsius)
+        } else {
+            return nil
+        }
     }
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("Conversion VC loaded its view")
+        updateClesiusLabel()
+    }
+    
+    let numberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+        return nf
+    }()
+    
+    
+    
+    func updateClesiusLabel() {
+        if let celsiusValue = celsiusValue {
+            //celsiusLabel.text = "\(celsiusValue.value)"
+            celsiusLabel.text = numberFormatter.string(from: NSNumber(value: celsiusValue.value))
+        } else {
+            celsiusLabel.text = "???"
+        }
+    }
+    
+    
+    
+    @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField){
+        //celsiusLabel.text = textField.text
+//        if let text = textField.text, !text.isEmpty {
+//            celsiusLabel.text = text
+//        } else {
+//            celsiusLabel.text = "???"
+//        }
+        if let text = textField.text, let value = Double(text){
+            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+        } else {
+            fahrenheitValue = nil
+        }
+        
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer){
+        textField.resignFirstResponder()
+    }
 
 }
 
