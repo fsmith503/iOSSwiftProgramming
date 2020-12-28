@@ -28,11 +28,6 @@ class ItemsViewController: UITableViewController {
             // insert this new row into the table
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
-        
-        
-        
-        
-        
     }
     
     @IBAction func toggleEditingMode(_ sender: UIButton){
@@ -62,23 +57,35 @@ class ItemsViewController: UITableViewController {
                              cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                              // create an instance of UITableViewCell with default appearance
                             //let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
-        
                             //get a new or recycled cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell",
                                                  for: indexPath)
-                                
-                            // set the text on the cell with the description of the item
-                            // that is at the nth index of items, where n = row this cell
-                            // will appear on the tableview
-                                
-                                let item = itemStore.allItems[indexPath.row]
-                                
-                                cell.textLabel?.text = item.name
-                                cell.detailTextLabel?.text = "$\(item.valueInDollars)"
-                                
-                                return cell
-                                
-                             }
+        // set the text on the cell with the description of the item
+        // that is at the nth index of items, where n = row this cell
+        // will appear on the tableview
+            let item = itemStore.allItems[indexPath.row]
+            cell.textLabel?.text = item.name
+            cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+            return cell
+            
+         }
+    
+    
+    override func tableView(_ tableView: UITableView,
+                            commit editingStyle: UITableViewCell.EditingStyle,
+                            forRowAt indexPath: IndexPath){
+                // if the table view is askig to commit a delete command...
+        if editingStyle == .delete {
+            let item = itemStore.allItems[indexPath.row]
+            
+            // remove the item from the store
+            itemStore.removeItem(item)
+            
+            // also remove that row from the table view with an animation
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+        }
+    }
     
 }
 
