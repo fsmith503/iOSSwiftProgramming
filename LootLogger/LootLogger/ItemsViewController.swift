@@ -11,6 +11,13 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        tableView.rowHeight = 65
+    }
+    
+    
+    
     @IBAction func addNewItem(_ sender: UIButton){
 //        // make a new index path for th 0th section, last row
 //        let lastRow = tableView.numberOfRows(inSection: 0)
@@ -58,14 +65,27 @@ class ItemsViewController: UITableViewController {
                              // create an instance of UITableViewCell with default appearance
                             //let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
                             //get a new or recycled cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell",
-                                                 for: indexPath)
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell",
+                                                 //for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell",
+                                                 for: indexPath) as! ItemCell
+        
+        
+        
         // set the text on the cell with the description of the item
         // that is at the nth index of items, where n = row this cell
         // will appear on the tableview
             let item = itemStore.allItems[indexPath.row]
-            cell.textLabel?.text = item.name
-            cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+            //cell.textLabel?.text = item.name
+            //cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        
+        //configure the cell with the Item
+        print("printing item.name below")
+        print(item.name)
+        cell.nameLabel.text = item.name
+        cell.serialNumberLabel.text = item.serialNumber
+        cell.valueLabel.text = "$\(item.valueInDollars)"
             return cell
             
          }

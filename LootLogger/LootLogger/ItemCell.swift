@@ -7,7 +7,7 @@
 
 import UIKit
 
-class itemCell: UITableViewCell {
+class ItemCell: UITableViewCell {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var serialNumberLabel: UILabel!
