@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="TCF-X8-Stj">
             <objects>
-                <viewController id="JWD-FK-Ksn" sceneMemberID="viewController">
+                <viewController id="JWD-FK-Ksn" customClass="DetailViewController" customModule="LootLogger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="to1-1v-dOj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,6 +92,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="v8J-22-8fm"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="XiA-jW-Ilo" id="Ann-Fc-pdj"/>
+                        <outlet property="nameField" destination="RDz-jL-SOj" id="bIb-xc-gGU"/>
+                        <outlet property="serialNumberField" destination="2sx-mr-nMH" id="NJm-rE-h1w"/>
+                        <outlet property="valueField" destination="y48-iQ-RDc" id="DEC-GD-w5Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1P-es-xH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,7 +181,7 @@
                                     <outlet property="nameLabel" destination="ydO-Nq-3C4" id="GSn-yc-iKe"/>
                                     <outlet property="serialNumberLabel" destination="QYR-li-dr9" id="R4p-c2-xqD"/>
                                     <outlet property="valueLabel" destination="7Fr-70-NsQ" id="cjj-6L-wXc"/>
-                                    <segue destination="JWD-FK-Ksn" kind="show" id="coc-Xc-70P"/>
+                                    <segue destination="JWD-FK-Ksn" kind="show" identifier="showItem" id="coc-Xc-70P"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3704FB0D259B2ABF00F71F8F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704FB0C259B2ABF00F71F8F /* DetailViewController.swift */; };
 		3726205D2596A2A500DE2653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726205C2596A2A500DE2653 /* AppDelegate.swift */; };
 		3726205F2596A2A500DE2653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726205E2596A2A500DE2653 /* SceneDelegate.swift */; };
 		372620642596A2A500DE2653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372620622596A2A500DE2653 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3704FB0C259B2ABF00F71F8F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		372620592596A2A500DE2653 /* LootLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LootLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726205C2596A2A500DE2653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3726205E2596A2A500DE2653 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				3726205C2596A2A500DE2653 /* AppDelegate.swift */,
 				3726205E2596A2A500DE2653 /* SceneDelegate.swift */,
 				372620622596A2A500DE2653 /* Main.storyboard */,
+				3704FB0C259B2ABF00F71F8F /* DetailViewController.swift */,
 				372620772597A69700DE2653 /* Item.swift */,
 				3726207A2597ABE000DE2653 /* ItemStore.swift */,
 				372620652596A2A600DE2653 /* Assets.xcassets */,
@@ -152,6 +155,7 @@
 				3726205D2596A2A500DE2653 /* AppDelegate.swift in Sources */,
 				3726207B2597ABE000DE2653 /* ItemStore.swift in Sources */,
 				3726205F2596A2A500DE2653 /* SceneDelegate.swift in Sources */,
+				3704FB0D259B2ABF00F71F8F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
