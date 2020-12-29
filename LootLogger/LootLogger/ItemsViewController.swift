@@ -13,7 +13,9 @@ class ItemsViewController: UITableViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        tableView.rowHeight = 65
+        //tableView.rowHeight = 65
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 65
     }
     
     
@@ -81,8 +83,8 @@ class ItemsViewController: UITableViewController {
             //cell.detailTextLabel?.text = "$\(item.valueInDollars)"
         
         //configure the cell with the Item
-        print("printing item.name below")
-        print(item.name)
+        //print("printing item.name below")
+        //print(item.name)
         cell.nameLabel.text = item.name
         cell.serialNumberLabel.text = item.serialNumber
         cell.valueLabel.text = "$\(item.valueInDollars)"
