@@ -24,9 +24,15 @@ class ItemsViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    required init?(coder aDecoder: NSCoder){
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
     
     
-    @IBAction func addNewItem(_ sender: UIButton){
+    
+    @IBAction func addNewItem(_ sender: UIBarButtonItem){
 //        // make a new index path for th 0th section, last row
 //        let lastRow = tableView.numberOfRows(inSection: 0)
 //        let indexPath = IndexPath(row: lastRow, section: 0)
@@ -45,23 +51,23 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    @IBAction func toggleEditingMode(_ sender: UIButton){
-        // if you are currently in editing mode...
-        if isEditing{
-            // change text of button to inform user of state
-            sender.setTitle("Edit", for: .normal)
-            
-            //turn off edition mode
-            setEditing(false, animated: true)
-        } else {
-            // change text of button to inform user of state
-            sender.setTitle("Done", for: .normal)
-            
-            // enter editing mode
-            setEditing(true, animated: true)
-        }
-        
-    }
+//    @IBAction func toggleEditingMode(_ sender: UIButton){
+//        // if you are currently in editing mode...
+//        if isEditing{
+//            // change text of button to inform user of state
+//            sender.setTitle("Edit", for: .normal)
+//            
+//            //turn off edition mode
+//            setEditing(false, animated: true)
+//        } else {
+//            // change text of button to inform user of state
+//            sender.setTitle("Done", for: .normal)
+//            
+//            // enter editing mode
+//            setEditing(true, animated: true)
+//        }
+//        
+//    }
     
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
