@@ -56,17 +56,17 @@ class ItemsViewController: UITableViewController {
 //        if isEditing{
 //            // change text of button to inform user of state
 //            sender.setTitle("Edit", for: .normal)
-//            
+//
 //            //turn off edition mode
 //            setEditing(false, animated: true)
 //        } else {
 //            // change text of button to inform user of state
 //            sender.setTitle("Done", for: .normal)
-//            
+//
 //            // enter editing mode
 //            setEditing(true, animated: true)
 //        }
-//        
+//
 //    }
     
     override func tableView(_ tableView: UITableView,
