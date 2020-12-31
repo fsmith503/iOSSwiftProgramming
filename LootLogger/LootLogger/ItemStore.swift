@@ -10,6 +10,12 @@ import UIKit
 class ItemStore{
     
     var allItems = [Item]()
+    let itemArchiveURL: URL = {
+        let documentsDirectories =
+            FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = documentsDirectories.first!
+        return documentDirectory.appendingPathComponent("items.plist")
+    }()
     
 //    init() {
 //        for _ in 0..<15{
@@ -43,6 +49,21 @@ class ItemStore{
         let newItem = Item(random: true)
         allItems.append(newItem)
         return newItem
+    }
+    
+    func saveChanges() -> Bool{
+        print("Saving items to:  \(itemArchiveURL)")
+        do {
+        let encoder = PropertyListEncoder()
+        //let data = encoder.encode(allItems)
+        let data = try encoder.encode(allItems)
+            try data.write(to: itemArchiveURL, options: [.atomic])
+            print("saved all of the items")
+            return true
+        } catch let encodingError{
+            print("Error encoding allitems:  \(encodingError)")
+            return false
+        }
     }
     
 }
