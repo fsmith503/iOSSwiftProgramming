@@ -17,6 +17,34 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var backgroundTapped: UITapGestureRecognizer!
     
     
+    @IBAction func choosePhotoSource(_ sender: UIBarButtonItem) {
+        
+        let alertController = UIAlertController(title: nil,
+                                                message: nil,
+                                                preferredStyle: .actionSheet)
+        
+        alertController.modalPresentationStyle = .popover
+        alertController.popoverPresentationController?.barButtonItem = sender
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: .default){ _ in
+            print("Present Camera")
+        }
+        
+        alertController.addAction(cameraAction)
+        
+        let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default){_ in
+            print("Present Photo Library")
+        }
+        alertController.addAction(photoLibraryAction)
+        
+        let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
     var item: Item!{
         didSet{
             navigationItem.title = item.name

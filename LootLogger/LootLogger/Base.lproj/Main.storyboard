@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R6l-73-UCd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -77,15 +77,29 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiA-jW-Ilo">
-                                        <rect key="frame" x="0.0" y="126" width="398" height="632"/>
+                                        <rect key="frame" x="0.0" y="126" width="398" height="580"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJQ-Sp-Pk1">
+                                        <rect key="frame" x="0.0" y="714" width="398" height="44"/>
+                                        <items>
+                                            <barButtonItem systemItem="camera" id="cf0-Wx-3XF">
+                                                <connections>
+                                                    <action selector="choosePhotoSource:" destination="JWD-FK-Ksn" id="mTN-Zz-CA2"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="tJQ-Sp-Pk1" firstAttribute="top" secondItem="XiA-jW-Ilo" secondAttribute="bottom" constant="8" id="SlJ-TY-sD7"/>
                                     <constraint firstItem="2sx-mr-nMH" firstAttribute="leading" secondItem="y48-iQ-RDc" secondAttribute="leading" id="aDl-W5-PMx"/>
+                                    <constraint firstAttribute="bottom" secondItem="tJQ-Sp-Pk1" secondAttribute="bottom" id="jTo-Cc-NOg"/>
+                                    <constraint firstItem="tJQ-Sp-Pk1" firstAttribute="leading" secondItem="2rD-4p-Ikh" secondAttribute="leading" id="jcS-EJ-HR9"/>
                                     <constraint firstItem="RDz-jL-SOj" firstAttribute="leading" secondItem="2sx-mr-nMH" secondAttribute="leading" id="lOy-6r-1QO"/>
+                                    <constraint firstAttribute="trailing" secondItem="tJQ-Sp-Pk1" secondAttribute="trailing" id="qkX-hs-HBP"/>
                                 </constraints>
                             </stackView>
                         </subviews>
