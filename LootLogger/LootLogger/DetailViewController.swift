@@ -18,7 +18,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     @IBOutlet var imageView: UIImageView!
     
-    
+     
     
     @IBAction func choosePhotoSource(_ sender: UIBarButtonItem) {
         
