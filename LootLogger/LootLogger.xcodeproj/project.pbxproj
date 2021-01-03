@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3704FB0D259B2ABF00F71F8F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704FB0C259B2ABF00F71F8F /* DetailViewController.swift */; };
+		3724EA1F25A165DE000EE24D /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724EA1E25A165DE000EE24D /* ImageStore.swift */; };
 		3726205D2596A2A500DE2653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726205C2596A2A500DE2653 /* AppDelegate.swift */; };
 		3726205F2596A2A500DE2653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726205E2596A2A500DE2653 /* SceneDelegate.swift */; };
 		372620642596A2A500DE2653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372620622596A2A500DE2653 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		3704FB0C259B2ABF00F71F8F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3724EA1E25A165DE000EE24D /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		372620592596A2A500DE2653 /* LootLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LootLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726205C2596A2A500DE2653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3726205E2596A2A500DE2653 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				3726205C2596A2A500DE2653 /* AppDelegate.swift */,
 				3726205E2596A2A500DE2653 /* SceneDelegate.swift */,
 				372620622596A2A500DE2653 /* Main.storyboard */,
+				3724EA1E25A165DE000EE24D /* ImageStore.swift */,
 				3704FB0C259B2ABF00F71F8F /* DetailViewController.swift */,
 				372620772597A69700DE2653 /* Item.swift */,
 				3726207A2597ABE000DE2653 /* ItemStore.swift */,
@@ -152,6 +155,7 @@
 				372620782597A69700DE2653 /* Item.swift in Sources */,
 				372620722596A5DF00DE2653 /* ItemsViewController.swift in Sources */,
 				37B4C92C259B133B0002FC46 /* ItemCell.swift in Sources */,
+				3724EA1F25A165DE000EE24D /* ImageStore.swift in Sources */,
 				3726205D2596A2A500DE2653 /* AppDelegate.swift in Sources */,
 				3726207B2597ABE000DE2653 /* ItemStore.swift in Sources */,
 				3726205F2596A2A500DE2653 /* SceneDelegate.swift in Sources */,
