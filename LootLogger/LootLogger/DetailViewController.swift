@@ -126,4 +126,20 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         return imagePicker
     }
     
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        
+     
+        // get picked image from info dictionary
+        let image = info[.originalImage] as! UIImage
+        
+        // put that image on the screen int he image view
+        imageView.image = image
+        
+        // take the picker off the screen = you must call this dismiss method
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
 }
