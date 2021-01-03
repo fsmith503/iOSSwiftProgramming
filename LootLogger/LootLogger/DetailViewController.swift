@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var nameField: UITextField!
     @IBOutlet var serialNumberField: UITextField!
@@ -15,6 +15,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var dateLabel: UILabel!
     
     @IBOutlet var backgroundTapped: UITapGestureRecognizer!
+    
+    @IBOutlet var imageView: UIImageView!
+    
     
     
     @IBAction func choosePhotoSource(_ sender: UIBarButtonItem) {
@@ -26,14 +29,23 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         alertController.modalPresentationStyle = .popover
         alertController.popoverPresentationController?.barButtonItem = sender
         
-        let cameraAction = UIAlertAction(title: "Camera", style: .default){ _ in
-            print("Present Camera")
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let cameraAction = UIAlertAction(title: "Camera", style: .default){ _ in
+                //print("Present Camera")
+                let imagePicker = self.imagePicker(for: .camera)
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+            alertController.addAction(cameraAction)
         }
         
-        alertController.addAction(cameraAction)
         
         let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default){_ in
-            print("Present Photo Library")
+            //print("Present Photo Library")
+            let imagePicker = self.imagePicker(for: .photoLibrary)
+            imagePicker.modalPresentationStyle = .popover
+            imagePicker.popoverPresentationController?.barButtonItem = sender
+            self.present(imagePicker, animated: true, completion:  nil)
         }
         alertController.addAction(photoLibraryAction)
         
@@ -105,6 +117,13 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             item.valueInDollars = 0
         }
         
+    }
+    
+    func imagePicker(for sourceType: UIImagePickerController.SourceType) -> UIImagePickerController {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = sourceType
+        imagePicker.delegate = self
+        return imagePicker
     }
     
 }
