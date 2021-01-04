@@ -26,7 +26,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sc8-vO-eNh">
                                             <rect key="frame" x="0.0" y="-8" width="412" height="50"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="QT9-h9-PC1"/>
+                                                <constraint firstAttribute="width" constant="50" id="QT9-h9-PC1"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
