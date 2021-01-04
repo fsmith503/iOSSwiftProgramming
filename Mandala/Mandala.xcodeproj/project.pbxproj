@@ -17,6 +17,8 @@
 		3760C4A425A3619B004F3E9D /* MandalaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760C4A325A3619B004F3E9D /* MandalaUITests.swift */; };
 		3760C4B525A36293004F3E9D /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760C4B425A36293004F3E9D /* Mood.swift */; };
 		3760C4BD25A362BC004F3E9D /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760C4BC25A362BC004F3E9D /* MoodEntry.swift */; };
+		3760C4C225A36642004F3E9D /* UIColor+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760C4C125A36642004F3E9D /* UIColor+Mandala.swift */; };
+		3760C4C725A366E9004F3E9D /* UImage+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760C4C625A366E9004F3E9D /* UImage+Mandala.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		3760C4A525A3619B004F3E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3760C4B425A36293004F3E9D /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		3760C4BC25A362BC004F3E9D /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
+		3760C4C125A36642004F3E9D /* UIColor+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Mandala.swift"; sourceTree = "<group>"; };
+		3760C4C625A366E9004F3E9D /* UImage+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UImage+Mandala.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				3760C4B425A36293004F3E9D /* Mood.swift */,
+				3760C4C125A36642004F3E9D /* UIColor+Mandala.swift */,
+				3760C4C625A366E9004F3E9D /* UImage+Mandala.swift */,
 				3760C4BC25A362BC004F3E9D /* MoodEntry.swift */,
 				3760C48125A3619B004F3E9D /* AppDelegate.swift */,
 				3760C48325A3619B004F3E9D /* SceneDelegate.swift */,
@@ -266,8 +272,10 @@
 			files = (
 				3760C4B525A36293004F3E9D /* Mood.swift in Sources */,
 				3760C48625A3619B004F3E9D /* ViewController.swift in Sources */,
+				3760C4C725A366E9004F3E9D /* UImage+Mandala.swift in Sources */,
 				3760C4BD25A362BC004F3E9D /* MoodEntry.swift in Sources */,
 				3760C48225A3619B004F3E9D /* AppDelegate.swift in Sources */,
+				3760C4C225A36642004F3E9D /* UIColor+Mandala.swift in Sources */,
 				3760C48425A3619B004F3E9D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,7 +459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.Mandala;
+				PRODUCT_BUNDLE_IDENTIFIER = com.franklin.mandala;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,7 +478,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.Mandala;
+				PRODUCT_BUNDLE_IDENTIFIER = com.franklin.mandala;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
