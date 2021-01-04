@@ -28,14 +28,6 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MP6-Vc-KRo">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sc8-vO-eNh">
-                                            <rect key="frame" x="0.0" y="-8" width="412" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="QT9-h9-PC1"/>
-                                            </constraints>
-                                        </stackView>
-                                    </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="v9B-KI-CFD"/>
@@ -53,6 +45,12 @@
                                     <action selector="addMoodTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MQf-AU-tQj"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sc8-vO-eNh">
+                                <rect key="frame" x="2" y="694" width="412" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="QT9-h9-PC1"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qZ6-kG-IC5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,6 +59,7 @@
                             <constraint firstAttribute="bottom" secondItem="2A9-FR-kxz" secondAttribute="bottom" id="J57-TL-j24"/>
                             <constraint firstItem="xGC-YU-cq8" firstAttribute="centerX" secondItem="ZRl-cD-534" secondAttribute="centerX" id="OZX-aM-G8I"/>
                             <constraint firstAttribute="trailing" secondItem="2A9-FR-kxz" secondAttribute="trailing" id="Q4V-A3-0Kw"/>
+                            <constraint firstItem="sc8-vO-eNh" firstAttribute="top" secondItem="ZRl-cD-534" secondAttribute="top" constant="694" id="jhF-dD-p81"/>
                             <constraint firstAttribute="trailing" secondItem="kHM-hm-PzK" secondAttribute="trailing" id="ptg-eb-R99"/>
                             <constraint firstItem="2A9-FR-kxz" firstAttribute="leading" secondItem="ZRl-cD-534" secondAttribute="leading" id="sg6-f1-M8t"/>
                             <constraint firstItem="kHM-hm-PzK" firstAttribute="leading" secondItem="ZRl-cD-534" secondAttribute="leading" id="xRg-ch-C45"/>
