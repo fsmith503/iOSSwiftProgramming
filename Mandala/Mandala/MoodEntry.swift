@@ -9,5 +9,5 @@ import Foundation
 
 struct MoodEntry{
     var mood: Mood
-    var timeStamp: Date
+    var timestamp: Date
 }
