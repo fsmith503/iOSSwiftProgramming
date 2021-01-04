@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,14 +23,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dp4-P8-d0l">
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dp4-P8-d0l">
                                             <rect key="frame" x="0.0" y="8" width="406" height="50"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwz-oW-p12">
-                                                    <rect key="frame" x="0.0" y="0.0" width="406" height="50"/>
-                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                </view>
-                                            </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="pVg-QS-hAO"/>
                                             </constraints>
@@ -44,11 +39,24 @@
                                 </view>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leK-GO-jrj">
+                                <rect key="frame" x="103.5" y="728" width="207" height="48"/>
+                                <color key="backgroundColor" name="goofyOrange"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="my4-CK-UUc"/>
+                                </constraints>
+                                <state key="normal" title="Add Mood">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="leK-GO-jrj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0gG-BG-6Ca"/>
+                            <constraint firstItem="leK-GO-jrj" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="TUI-BC-MJE"/>
                             <constraint firstAttribute="bottom" secondItem="MpF-Do-b37" secondAttribute="bottom" id="Vcs-Ln-nk0"/>
+                            <constraint firstItem="MpF-Do-b37" firstAttribute="top" secondItem="leK-GO-jrj" secondAttribute="bottom" constant="20" id="hap-Fv-06F"/>
                             <constraint firstAttribute="trailing" secondItem="MpF-Do-b37" secondAttribute="trailing" id="rhl-9V-3tX"/>
                             <constraint firstItem="MpF-Do-b37" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sEf-2v-F1S"/>
                         </constraints>
@@ -60,11 +68,11 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="goofyOrange">
+            <color red="0.97647058823529409" green="0.65490196078431373" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
