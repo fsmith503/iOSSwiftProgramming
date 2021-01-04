@@ -15,18 +15,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpF-Do-b37">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QW2-GH-ia1">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dp4-P8-d0l">
+                                            <rect key="frame" x="0.0" y="8" width="406" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwz-oW-p12">
+                                                    <rect key="frame" x="0.0" y="0.0" width="406" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="pVg-QS-hAO"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dp4-P8-d0l" secondAttribute="trailing" id="Awb-SZ-a5K"/>
+                                        <constraint firstItem="dp4-P8-d0l" firstAttribute="leadingMargin" secondItem="QW2-GH-ia1" secondAttribute="leading" id="B8s-kf-tNQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dp4-P8-d0l" secondAttribute="bottom" id="Tcq-m8-W4J"/>
+                                        <constraint firstItem="dp4-P8-d0l" firstAttribute="top" secondItem="QW2-GH-ia1" secondAttribute="top" constant="8" id="oBX-ID-JLc"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="MpF-Do-b37" secondAttribute="bottom" id="Vcs-Ln-nk0"/>
+                            <constraint firstAttribute="trailing" secondItem="MpF-Do-b37" secondAttribute="trailing" id="rhl-9V-3tX"/>
+                            <constraint firstItem="MpF-Do-b37" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sEf-2v-F1S"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-261" y="138"/>
+            <point key="canvasLocation" x="-262.31884057971018" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
