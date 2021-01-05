@@ -108,4 +108,9 @@ class ImageSelector: UIControl {
         super.init(coder: aDecoder)
         configureViewHierarchy()
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        highlightView.layer.cornerRadius = highlightView.bounds.width / 2.0
+    }
 }
