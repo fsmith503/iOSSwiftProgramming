@@ -10,7 +10,21 @@ import UIKit
 class ImageSelector: UIControl {
     
     
-    var selectedIndex = 0
+    var selectedIndex = 0 {
+        didSet {
+            if selectedIndex < 0 {
+                selectedIndex = 0
+            }
+            if selectedIndex >= imageButtons.count {
+                selectedIndex = imageButtons.count - 1
+            }
+            
+            let imageButton = imageButtons[selectedIndex]
+            highlightViewXConstraint = highlightView.centerXAnchor.constraint(equalTo: imageButton.centerXAnchor)
+        }
+        
+        
+    }
     
     private var imageButtons: [UIButton] = [] {
         didSet{
@@ -18,6 +32,14 @@ class ImageSelector: UIControl {
             imageButtons.forEach { selectorStackView.addArrangedSubview($0)}
         }
     }
+    
+    private let highlightView: UIView = {
+        let view = UIView()
+        view.backgroundColor = view.tintColor
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     
     var images: [UIImage] = [] {
         didSet {
@@ -57,13 +79,24 @@ class ImageSelector: UIControl {
     
     private func configureViewHierarchy() {
         addSubview(selectorStackView)
+        insertSubview(highlightView, belowSubview: selectorStackView)
         
         NSLayoutConstraint.activate([
             selectorStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             selectorStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             selectorStackView.topAnchor.constraint(equalTo: topAnchor),
-            selectorStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            selectorStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            highlightView.heightAnchor.constraint(equalTo: highlightView.widthAnchor),
+            highlightView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.9), highlightView.centerYAnchor.constraint(equalTo: selectorStackView.centerYAnchor),
         ])
+    }
+    
+    
+    private var highlightViewXConstraint: NSLayoutConstraint! {
+        didSet {
+            oldValue?.isActive = false
+            highlightViewXConstraint.isActive = true
+        }
     }
     
     override init(frame: CGRect){
