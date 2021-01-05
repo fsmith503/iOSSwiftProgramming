@@ -10,6 +10,8 @@ import UIKit
 class ImageSelector: UIControl {
     
     
+    
+    
     var selectedIndex = 0 {
         didSet {
             if selectedIndex < 0 {
@@ -19,11 +21,17 @@ class ImageSelector: UIControl {
                 selectedIndex = imageButtons.count - 1
             }
             
+            highlightView.backgroundColor = highlightColor(forIndex: selectedIndex)
+            
             let imageButton = imageButtons[selectedIndex]
             highlightViewXConstraint = highlightView.centerXAnchor.constraint(equalTo: imageButton.centerXAnchor)
         }
-        
-        
+    }
+    
+    var highlightColors: [UIColor] = [] {
+        didSet {
+            highlightView.backgroundColor = highlightColor(forIndex: selectedIndex)
+        }
     }
     
     private var imageButtons: [UIButton] = [] {
@@ -35,7 +43,7 @@ class ImageSelector: UIControl {
     
     private let highlightView: UIView = {
         let view = UIView()
-        view.backgroundColor = view.tintColor
+        //view.backgroundColor = view.tintColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -58,12 +66,29 @@ class ImageSelector: UIControl {
         }
     }
     
+    private func highlightColor(forIndex index: Int) -> UIColor {
+        guard index >= 0 && index < highlightColors.count else {
+            return UIColor.blue.withAlphaComponent(0.6)
+        }
+        return highlightColors[index]
+    }
+    
     
     @objc private func imageButtonTapped(_ sender: UIButton) {
         guard let buttonIndex = imageButtons.firstIndex(of: sender) else {
             preconditionFailure("the buttons and images are not paralell.")
         }
-        selectedIndex = buttonIndex
+        //selectedIndex = buttonIndex
+        
+        let selectionAnimator = UIViewPropertyAnimator(
+            duration: 0.3,
+            //curve: .easeIn,
+            dampingRatio: 0.7,
+            animations: {
+                self.selectedIndex = buttonIndex
+                self.layoutIfNeeded()
+            })
+        selectionAnimator.startAnimation()
         sendActions(for: .valueChanged)
     }
     
