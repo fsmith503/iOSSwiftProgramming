@@ -12,10 +12,9 @@ enum EndPoint: String {
 }
 
 struct FlickrResponse: Codable {
-    //let photos: FlickrPhotosResponse
     let photosInfo: FlickrPhotosResponse
-    
-    enum CodingKeys: String, Codingkey {
+
+    enum CodingKeys: String, CodingKey {
         case photosInfo = "photos"
     }
 }

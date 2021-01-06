@@ -15,7 +15,7 @@ class PhotoStore {
     }()
 
 
-        func fetchInterestingPhotos() {
+        func fetchInterestingPhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
             
             let url = FlickrAPI.interestingPhotosURL
             let request = URLRequest(url: url)
