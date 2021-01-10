@@ -18,6 +18,7 @@
 		3759D29D25A55756001E1BD8 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3759D29C25A55756001E1BD8 /* FlickrAPI.swift */; };
 		3759D2A225A55C20001E1BD8 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3759D2A125A55C20001E1BD8 /* PhotoStore.swift */; };
 		3759D2A725A5621E001E1BD8 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3759D2A625A5621E001E1BD8 /* Photo.swift */; };
+		37B616EF25AA849800A68412 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B616EE25AA849800A68412 /* PhotoDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3759D29C25A55756001E1BD8 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		3759D2A125A55C20001E1BD8 /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 		3759D2A625A5621E001E1BD8 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		37B616EE25AA849800A68412 /* PhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				3759D26825A555B5001E1BD8 /* SceneDelegate.swift */,
 				3759D26A25A555B5001E1BD8 /* PhotosViewController.swift */,
 				3759D26C25A555B5001E1BD8 /* Main.storyboard */,
+				37B616EE25AA849800A68412 /* PhotoDataSource.swift */,
 				3759D29C25A55756001E1BD8 /* FlickrAPI.swift */,
 				3759D2A125A55C20001E1BD8 /* PhotoStore.swift */,
 				3759D2A625A5621E001E1BD8 /* Photo.swift */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3759D2A725A5621E001E1BD8 /* Photo.swift in Sources */,
+				37B616EF25AA849800A68412 /* PhotoDataSource.swift in Sources */,
 				3759D2A225A55C20001E1BD8 /* PhotoStore.swift in Sources */,
 				3759D26B25A555B5001E1BD8 /* PhotosViewController.swift in Sources */,
 				3759D26725A555B5001E1BD8 /* AppDelegate.swift in Sources */,
