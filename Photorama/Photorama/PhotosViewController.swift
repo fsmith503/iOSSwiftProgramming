@@ -20,22 +20,27 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         collectionView.dataSource = photoDataSource
         collectionView.delegate = self
         
+        
+        updateDataSource()
+        
         //store.fetchInterestingPhotos() {
         store.fetchInterestingPhotos() {
-            (photosResult) in
+            (photosResult) -> Void in
             
-            switch photosResult {
-            case let .success(photos):
-                print("Successfully found \(photos.count) photos.")
-//                if let firstPhoto = photos.first {
-//                    self.updateImageView(for: firstPhoto)
-//                }
-                self.photoDataSource.photos = photos
-            case let .failure(error):
-                print("Error fetching interesting photos: \(error)")
-                self.photoDataSource.photos.removeAll()
-            }
-            self.collectionView.reloadSections(IndexSet(integer: 0))
+            self.updateDataSource()
+            
+//            switch photosResult {
+//            case let .success(photos):
+//                print("Successfully found \(photos.count) photos.")
+////                if let firstPhoto = photos.first {
+////                    self.updateImageView(for: firstPhoto)
+////                }
+//                self.photoDataSource.photos = photos
+//            case let .failure(error):
+//                print("Error fetching interesting photos: \(error)")
+//                self.photoDataSource.photos.removeAll()
+//            }
+//            self.collectionView.reloadSections(IndexSet(integer: 0))
         }
         // Do any additional setup after loading the view.
     }
@@ -84,19 +89,19 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         }
     }
     
-    
-//    func updateImageView(for photo: Photo){
-//        store.fetchImage(for: photo) {
-//            (imageResult) in
-//
-//            switch imageResult {
-//            case let .success(image):
-//                self.imageView.image = image
-//            case let .failure(error):
-//                print("Error downloading image: \(error)")
-//            }
-//        }
-//    }
+    private func updateDataSource() {
+        store.fetchAllPhotos {
+            (photosResult) in
+            
+            switch photosResult {
+            case let .success(photos):
+                self.photoDataSource.photos = photos
+            case .failure:
+                self.photoDataSource.photos.removeAll()
+            }
+            self.collectionView.reloadSections(IndexSet(integer: 0))
+        }
+    }
 
 }
 

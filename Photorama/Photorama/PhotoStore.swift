@@ -42,17 +42,19 @@ class PhotoStore {
             let request = URLRequest(url: url)
             let task = session.dataTask(with: request){
                 (data, response, error) in
+                //let result = self.processPhotosRequest(data: data, error: error)
                 
-//                if let jsonData = data {
-//                    if let jsonString = String(data: jsonData, encoding:.utf8){
-//                        print(jsonString)
-//                    }
-//                } else if let requestError = error {
-//                    print("Error fetching interesting photos: \(requestError)")
-//                } else {
-//                    print("Unexpected error with the request")
-//                }
-                let result = self.processPhotosRequest(data: data, error: error)
+                
+                var result = self.processPhotosRequest(data: data, error: error)
+                if case .success = result {
+                    do {
+                        try self.persistentContainer.viewContext.save()
+                    } catch {
+                        result = .failure(error)
+                    }
+                }
+                
+                
                 OperationQueue.main.addOperation {
                     completion(result)
                 }
@@ -72,6 +74,21 @@ class PhotoStore {
         switch FlickrAPI.photos(fromJSON: jsonData){
         case let .success(FlickrPhotos):
             let photos = FlickrPhotos.map { flickrPhoto -> Photo in
+                let fetchRequest: NSFetchRequest<Photo> = Photo.fetchRequest()
+                let predicate = NSPredicate(
+                    format: "\(#keyPath(Photo.photoID)) == \(flickrPhoto.photoID)"
+                )
+                fetchRequest.predicate = predicate
+                var fetchedPhotos: [Photo]?
+                context.performAndWait {
+                    fetchedPhotos = try? fetchRequest.execute()
+                }
+                if let existingPhoto = fetchedPhotos?.first {
+                    return existingPhoto
+                }
+                
+                
+                
             var photo: Photo!
             context.performAndWait {
                 photo = Photo(context: context)
@@ -100,10 +117,6 @@ class PhotoStore {
             }
             return
         }
-        
-        
-        
-        
         guard let photoURL = photo.remoteURL else{
             completion(.failure(PhotoError.missingImageURL))
             return
@@ -123,13 +136,12 @@ class PhotoStore {
                 completion(result)
             }
             //completion(result)
-            
         }
         task.resume()
     }
     
+    
     private func processImageRequest(data: Data?, error: Error?) -> Result<UIImage, Error> {
-        
         guard
             let imageData = data,
             let image = UIImage(data: imageData) else {
@@ -141,9 +153,24 @@ class PhotoStore {
                 return .failure(PhotoError.imageCreationError)
             }
         }
-        
         return .success(image)
+    }
         
+    
+    func fetchAllPhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
+        let fetchRequest: NSFetchRequest<Photo> = Photo.fetchRequest()
+        let sortByDateTaken = NSSortDescriptor(key: #keyPath(Photo.dateTaken), ascending: true)
+        fetchRequest.sortDescriptors = [sortByDateTaken]
+        
+        let viewContext = persistentContainer.viewContext
+        viewContext.perform {
+            do {
+                let allPhotos = try viewContext.fetch(fetchRequest)
+                completion(.success(allPhotos))
+            } catch {
+                completion(.failure(error))
+            }
+        }
     }
     
     
